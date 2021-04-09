@@ -11,14 +11,14 @@ This repository is split into folders. Each folder has a corresponding blog post
 
 | Blog Post                   | Code               |                                                         |
 | :-------------------------- | ------------------ | ------------------------------------------------------- |
-| [Intro to serverless](/tbd) | [/Part_1](/part_1) | <img src="/resources/simpleserverless.png" width="400"> |
-| [The business logic](/tbd)  | [/Part_2](/part_2) | <img src="/resources/serverlessPart2.png" width="400">  |
-| [The front door](/tbd)      | [/Part_3](/part_3) | <img src="/resources/serverlessPart3.png" width="400">  |
+| [Intro to serverless](/tbd) <br> Learn why developers need serverless technologies and which challenges serverless technologies help to solve. You deploy a simple serverless application to your AWS account that connects Slack to GitHub and see first-hand why serverless technologies sparks joy for developers. | [/Part_1](/part_1) | <img src="/resources/simpleserverless.png" width="400"> |
+| [The business logic](/tbd) <br> Learn where that business logic exists within the serverless application. You see how to extend the application by editing the business logic and learn about some of the AWS services involved.  | [/Part_2](/part_2) | <img src="/resources/serverlessPart2.png" width="400">  |
+| [The front door](/tbd) <br> See how to access business logic by creating a front door to your serverless application with Amazon API Gateway. You extend the example serverless application to process an additional GitHub webhook URL. Finally, you see how Serverless applications help to reduce complexity and code by decoupling business logic from routing logic.      | [/Part_3](/part_3) | <img src="/resources/serverlessPart3.png" width="400">  |
 
 
 ### The Application
 
-By the end of this 3-part series you will have deployed a serverless application that connects GitHub and Slack by notifying users when a repository has been starred or forked. The final output of which loks like the following:
+By the end of this 3-part series you will have deployed a serverless application that connects GitHub and Slack together. The app will post a message to Slack when a GitHub repository has been starred or forked. The final output of which loks like the following:
 ![GitHub to Slack](/resources/slackpost.png)
 
 
@@ -35,6 +35,7 @@ By the end of this 3-part series you will have deployed a serverless application
 
 ## Get started
 
+#### Part 1 : intro to serverless:
 
 
 
