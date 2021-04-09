@@ -1,6 +1,6 @@
 ## Getting started with serverless
 
-![img](/resources/gettingstarted.png)
+![img](/resources/mountain.png)
 
 This getting started series is written by the Serverless Developer advocate team @AWSCloud. It has been designed for developers who know how to code but are new to serverless. Follow along with blog posts, code samples, and practical exercises to learn how to build serverless applications from your local Integrated development environment (IDE).
 
