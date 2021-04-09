@@ -9,12 +9,11 @@ This getting started series is written by the Serverless Developer advocate team
 
 This repository is split into folders. Each folder has a corresponding blog post on the AWS serverless Compute blog. Read the blogs posts and refer back to the code samples in this repository:
 
-| Blog Post              | Code              |                                         |
-| :--------------------- | ----------------- | --------------------------------------- |
-| [Part 1: Intro](/tbd)  | [Part 1](/part_1) | ![img](/resources/simpleserverless.png) |
-| Part 2: Business logic | [Part 2](/part_2) | ![img](/resources/serverlessPart2.png) |
-| Part 3: Front door     | [Part 3](/part_3) | ![img](/resources/serverlessPart3.png) |
-| More comming soon      |                   | ![img](/resources/finalserverless.png)                                        |
+| Blog Post                   | Code               |                                                         |
+| :-------------------------- | ------------------ | ------------------------------------------------------- |
+| [Intro to serverless](/tbd) | [/Part_1](/part_1) | <img src="/resources/simpleserverless.png" width="400"> |
+| [The business logic](/tbd)  | [/Part_2](/part_2) | <img src="/resources/serverlessPart2.png" width="400">  |
+| [The front door](/tbd)      | [/Part_3](/part_3) | <img src="/resources/serverlessPart3.png" width="400">  |
 
 
 ### The Application
