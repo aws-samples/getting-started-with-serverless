@@ -19,28 +19,10 @@ This repository is split into folders. Each folder has a corresponding blog post
 ### The Application
 
 By the end of this 3-part series you will have deployed a serverless application that connects GitHub and Slack together. The app will post a message to Slack when a GitHub repository has been starred or forked. The final output of which loks like the following:
-![GitHub to Slack](/resources/slackpost.png)
 
 
-## What you will learn
-* Why developers need serverless technologies
-* What is horizontal scaling
-* How to deploy a serverless App from your IDE
-* Where the business logic runs
-* How to access business logic
-* How to decouple busines logic from routing logic
-
-
-
-
-## Get started
-
-#### Part 1 : intro to serverless:
-
-
-
-
-
+| ![simple Serverless](/resources/simpleserverless.png) | ![GitHub to Slack](/resources/slackpost.png) |
+| :---------------------------------------------------- | -------------------------------------------- |
 
 
 ## Prerequisits
