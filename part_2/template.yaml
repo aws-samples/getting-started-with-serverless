@@ -1,0 +1,48 @@
+## Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
+## SPDX-License-Identifier: MIT-0
+
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Introduction to serverless for developers:part2 GitHub to Slack
+  
+##########################################################################
+#  Parameters & Globals                                                  #
+##########################################################################
+Parameters:
+  slackUrl:
+    Type: String
+    Description: your Slack Webhook Url.
+    Default: ""
+Resources:
+##########################################################################
+#   Lambda Function                                                      #
+##########################################################################
+  webhookHandler:
+    Type: AWS::Serverless::Function
+    Description: A github webhook handler
+    Properties:
+      CodeUri: src/
+      Handler: app.handler
+      Runtime: nodejs12.x
+      Timeout: 3
+      Environment:
+        Variables:
+          slackEndpoint: !Ref slackUrl
+      Events:
+        HttpApiEvent:
+          Type: HttpApi
+          Properties:
+            Path: /
+            Method: POST
+
+
+##########################################################################
+#   Stack outputs                                                        #
+##########################################################################
+Outputs:
+  GitHubEndpoint:
+    Description: "The star invocation URl to provide to github webhook"
+    Value: !Sub "https://${ServerlessHttpApi}.execute-api.${AWS::Region}.amazonaws.com"
+
+
+
