@@ -35,7 +35,7 @@ To deploy this application, you need:
 
 
 # Deploy the App
-refer to [blog post part 1](https://aws.amazon.com/blogs/compute/getting-started-with-serverless-for-developers-part-1/) to deploy the app:
+Refer to [blog post part 1](https://aws.amazon.com/blogs/compute/getting-started-with-serverless-for-developers-part-1#attachment_13811) to deploy the app:
 
 
 ## Security
