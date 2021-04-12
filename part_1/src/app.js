@@ -29,9 +29,9 @@ exports.handler = (event) => {
     ]
   }
 
-    var data = JSON.stringify(message);
+  const data = JSON.stringify(message);
 
-    var config = {
+  const config = {
     method: 'post',
     url: slackEndpoint,
     data : data

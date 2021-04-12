@@ -14,7 +14,7 @@ exports.handler = (event) => {
   const stars = repository.stargazers_count;
   const username = sender.login;
   const url = sender.html_url;
-  //const avatar_url = sender.avatar_url;
+  const avatar_url = sender.avatar_url;
 
 
  const message ={ "attachments": [
@@ -24,16 +24,16 @@ exports.handler = (event) => {
                     `_${repo}_* now has *${stars}* stars!`,
                     `Your new :star: was made by <${url}|${username}>.`
                   ].join('\n'),
-          //"thumb_url":`${avatar_url}`,
+          "thumb_url":`${avatar_url}`,
           "footer": "Serverless App",
           "footer_icon": "https://platform.slack-edge.com/img/default_application_icon.png",
       }
     ]
   }
 
-    var data = JSON.stringify(message);
+  const data = JSON.stringify(message);
 
-    var config = {
+  const config = {
     method: 'post',
     url: slackEndpoint,
     data : data
