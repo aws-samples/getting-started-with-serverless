@@ -34,6 +34,8 @@ To deploy this application, you need:
 * A [Slack](https://slack.com/) account with the ability to create apps.
 
 
+# Deploy the App
+refer to [blog post part 1](https://aws.amazon.com/blogs/compute/getting-started-with-serverless-for-developers-part-1/) to deploy the app:
 
 
 ## Security
