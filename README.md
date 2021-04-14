@@ -6,7 +6,7 @@ This getting started series is written by the serverless developer advocate team
 
 
 
-### How to use this Repo
+### How to use this Repository
 
 This repository is split into folders. Each folder has a corresponding blog post on the AWS serverless Compute blog. Read the blogs posts and refer back to the code samples in this repository:
 
