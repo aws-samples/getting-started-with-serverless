@@ -6,7 +6,7 @@ This getting started series is written by the serverless developer advocate team
 
 
 
-### How to use this Repo
+### How to use this Repository
 
 This repository is split into folders. Each folder has a corresponding blog post on the AWS serverless Compute blog. Read the blogs posts and refer back to the code samples in this repository:
 
@@ -29,7 +29,7 @@ By the end of this 3-part series you will have built a serverless application th
 ## Prerequisits
 
 To deploy this application, you need:
-* The [AWS Serverless Application Model (AWS SAM CLI)](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install.html) installed with an (AWS account)[https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/] set up.
+* The [AWS Serverless Application Model (AWS SAM CLI)](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install.html) installed with an [AWS account](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/) set up.
 * A GitHub account, and a repository with admin permissions.
 * A [Slack](https://slack.com/) account with the ability to create apps.
 
