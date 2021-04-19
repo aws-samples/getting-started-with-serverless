@@ -2,7 +2,7 @@
 
 This getting started series is written by the serverless developer advocate team @AWSCloud. It has been designed for developers who know how to code but are new to serverless. Follow along with blog posts, code samples, and practical exercises to learn how to build serverless applications from your local Integrated development environment (IDE).
 
-![img](/resources/gettingstarted-developer.png)
+![img](/resources/gettingstarted-developer_2.png)
 
 
 

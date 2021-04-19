@@ -1,0 +1,18 @@
+{
+    "configurations": [
+        {
+            "type": "aws-sam",
+            "request": "direct-invoke",
+            "name": "part_3:StarWebhookHandler",
+            "invokeTarget": {
+                "target": "template",
+                "templatePath": "${workspaceFolder}/part_3/template.yaml",
+                "logicalId": "StarWebhookHandler"
+            },
+            "lambda": {
+                "payload": {},
+                "environmentVariables": {}
+            }
+        }
+    ]
+}
