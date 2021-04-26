@@ -65,6 +65,3 @@ Outputs:
   PushGitHubEndpoint:
     Description: "The push invocation URl to provide to github webhook"
     Value: !Sub "https://${ServerlessHttpApi}.execute-api.${AWS::Region}.amazonaws.com/push"
-
-
-
