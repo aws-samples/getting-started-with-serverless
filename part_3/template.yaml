@@ -35,23 +35,23 @@ Resources:
             Path: /
             Method: POST
   
-  # ForkWebhookHandler:
+  # PushWebhookHandler:
   #   Type: AWS::Serverless::Function
-  #   Description: A github webhook handler when repo is forked
+  #   Description: A github webhook handler when new push is made
   #   Properties:
-  #     CodeUri: src_forked/
-  #     Handler: app.handler
-  #     Runtime: nodejs12.x
-  #     Timeout: 3
-  #     Environment:
-  #       Variables:
-  #         slackEndpoint: !Ref slackUrl
-  #     Events:
-  #       HttpApiEvent:
-  #         Type: HttpApi
-  #         Properties:
-  #           Path: /fork
-  #           Method: POST
+  #      CodeUri: src_push/
+  #      Handler: app.handler
+  #      Runtime: nodejs12.x
+  #      Timeout: 3
+  #      Environment:
+  #        Variables:
+  #          slackEndpoint: !Ref slackUrl
+  #      Events:
+  #        HttpApiEvent:
+  #          Type: HttpApi
+  #          Properties:
+  #            Path: /push
+  #            Method: POST
 
 
 ##########################################################################
@@ -62,9 +62,6 @@ Outputs:
     Description: "The star invocation URl to provide to github webhook"
     Value: !Sub "https://${ServerlessHttpApi}.execute-api.${AWS::Region}.amazonaws.com"
 
-  ForkGitHubEndpoint:
-    Description: "The fork invocation URl to provide to github webhook"
-    Value: !Sub "https://${ServerlessHttpApi}.execute-api.${AWS::Region}.amazonaws.com/fork"
-
-
-
+  PushGitHubEndpoint:
+    Description: "The push invocation URl to provide to github webhook"
+    Value: !Sub "https://${ServerlessHttpApi}.execute-api.${AWS::Region}.amazonaws.com/push"
