@@ -9,22 +9,18 @@ SPDX-License-Identifier: MIT-0
  const slackEndpoint = process.env.slackEndpoint;
 exports.handler = (event) => {
   const body = JSON.parse(event.body)
-  const { repository, sender, forkee } = body;
+  const { repository, sender, head_commit } = body;
   const repo = repository.name;
-  const forks = repository.forks_count;
-  const username = forkee.owner.login;
   const url = sender.html_url;
-  const avatar_url = forkee.owner.avatar_url;
-  const fork_url = forkee.html_url;
+  const avatar_url = sender.avatar_url;
 
 
  const message ={ "attachments": [
       {
-          "pretext": `One of your Github Repos has been forked _${repo}_ !`,
-          "text": [
-                    `_${repo}_* now has *${forks}* forks!`,
-                    `Your new :fork_and_knife: was made by <${url}|${username}>.`,
-                    `The location of the forked repository is ${fork_url}`
+          "pretext": `A new push has been made to _${repo}_ !`,
+          "text": [ 
+                    `Message  ${head_commit.message}.`,        
+                    `Made by <${url}|${head_commit.author.username}>.`,
                   ].join('\n'),
           "thumb_url":`${avatar_url}`,
           "footer": "Serverless App",
