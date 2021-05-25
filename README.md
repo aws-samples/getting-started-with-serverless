@@ -19,7 +19,7 @@ This repository is split into folders. Each folder has a corresponding blog post
 
 ### The Application
 
-By the end of this 3-part series you will have built a serverless application that connects GitHub and Slack together. The app will post a message to Slack when a GitHub repository has been starred or forked. The final output of which loks like the following:
+By the end of this 3-part series you will have built a serverless application that connects GitHub and Slack together. The app will post a message to Slack when a GitHub repository has been starred or a push made. The final output of which looks like the following:
 
 
 | ![simple Serverless](/resources/simpleserverless.png) | ![GitHub to Slack](/resources/slackpost.png) |
