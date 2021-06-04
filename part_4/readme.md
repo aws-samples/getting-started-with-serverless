@@ -27,8 +27,7 @@ The S3 bucket name value can be found in the outpus when your applicaiton is dep
 ```json
 {
 "slackEndpoint": "Insert_Slack_Endpoint",
-"bucket" : "Insert_S3_Bucket_Name",
-"AWS_REGION":"Insert_AWS_Region" // optional
+"bucket" : "Insert_S3_Bucket_Name"
 }
 ```
 
