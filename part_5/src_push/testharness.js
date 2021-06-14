@@ -15,10 +15,11 @@
 // Mock event
 const event = require('../events/pushevent.json')
 // Mock environment variables
-process.env.AWS_REGION = 'eu-west-1'
+const environmentVars = require('../env.json')
+process.env.AWS_REGION = environmentVars.AWS_REGION
 process.env.localTest = true
-process.env.slackEndpoint= "{insert-slackEndpoint}"
-process.env.bucket = '{insert-bucketvalue}'
+process.env.slackEndpoint= environmentVars.slackEndpoint
+process.env.bucket = environmentVars.bucket
 // Lambda handler
 const { handler } = require('./app')
 const main = async () => {

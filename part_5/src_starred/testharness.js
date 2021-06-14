@@ -13,12 +13,13 @@
   SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 // Mock event
-const event = require('../events/testEvent.json')
+const event = require('../events/pushevent.json')
 // Mock environment variables
-process.env.AWS_REGION = 'eu-west-1'
+const environmentVars = require('../env.json')
+process.env.AWS_REGION = environmentVars.AWS_REGION
 process.env.localTest = true
-process.env.slackEndpoint= "https://hooks.slack.com/services/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"
-process.env.bucket = 'githubtoslackapp-srcbucket-ge4wkt9dljwa'
+process.env.slackEndpoint= environmentVars.slackEndpoint
+process.env.bucket = environmentVars.bucket
 // Lambda handler
 const { handler } = require('./app')
 const main = async () => {
