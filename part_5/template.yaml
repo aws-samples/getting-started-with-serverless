@@ -1,0 +1,100 @@
+## Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
+## SPDX-License-Identifier: MIT-0
+
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Introduction to serverless for developers:part3 GitHub to Slack
+  
+##########################################################################
+#  Parameters & Globals                                                  #
+##########################################################################
+Parameters:
+  slackUrl:
+    Type: String
+    Description: your Slack Webhook Url.
+    Default: ""
+Resources:
+##########################################################################
+#   Lambda Functions                                                      #
+##########################################################################
+  StarWebhookHandler:
+    Type: AWS::Serverless::Function
+    Description: A github webhook handler when repo is starred
+    Properties:
+      CodeUri: src_starred/
+      Handler: app.handler
+      Runtime: nodejs12.x
+      Timeout: 3
+      Policies:
+        - S3ReadPolicy:
+            BucketName: !Ref SrcBucket
+       # Un-comment the following 2 lines to grant S3 read permissions     
+       #- S3WritePolicy: 
+        #   BucketName: !Ref SrcBucket
+      Environment:
+        Variables:
+          slackEndpoint: !Ref slackUrl
+          bucket: !Ref SrcBucket
+      Events:
+        HttpApiEvent:
+          Type: HttpApi
+          Properties:
+            Path: /
+            Method: POST
+      
+  
+  PushWebhookHandler:
+    Type: AWS::Serverless::Function
+    Description: A github webhook handler when repo is forked
+    Properties:
+      CodeUri: src_push/
+      Handler: app.handler
+      Runtime: nodejs12.x
+      Timeout: 3
+      Policies:
+        - S3WritePolicy:
+            BucketName: !Ref SrcBucket
+      Environment:
+        Variables:
+          slackEndpoint: !Ref slackUrl
+          bucket: !Ref SrcBucket
+      Events:
+        HttpApiEvent:
+          Type: HttpApi
+          Properties:
+            Path: /push
+            Method: POST
+
+  SrcBucket:
+    Type: AWS::S3::Bucket
+
+##########################################################################
+#   Stack outputs                                                        #
+##########################################################################
+Outputs:
+
+  StackName:
+    Description: "The stack name"
+    Value: !Ref AWS::StackName
+
+  StarGitHubEndpoint:
+    Description: "The star invocation URl to provide to github webhook"
+    Value: !Sub "https://${ServerlessHttpApi}.execute-api.${AWS::Region}.amazonaws.com"
+
+  PushGitHubEndpoint:
+    Description: "The Push invocation URl to provide to github webhook"
+    Value: !Sub "https://${ServerlessHttpApi}.execute-api.${AWS::Region}.amazonaws.com/fork"
+
+  StarWebhookLambdaFunctionName:
+    Description: "Logical resource name of the deployed Lambda function"
+    Value: !Ref StarWebhookHandler
+
+  PushWebhookFunctionName:
+    Description: "Logical resource name of the deployed Lambda function"
+    Value: !Ref PushWebhookHandler
+
+  Bucket:
+    Description: "My S3 log bucket"
+    Value: !Ref SrcBucket
+
+
