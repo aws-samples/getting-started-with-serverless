@@ -19,8 +19,8 @@ Resources:
 ##########################################################################
   webhookHandler:
     Type: AWS::Serverless::Function
-    Description: A github webhook handler
     Properties:
+      Description: A github webhook handler
       CodeUri: src/
       Handler: app.handler
       Runtime: nodejs12.x

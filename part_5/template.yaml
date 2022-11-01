@@ -19,8 +19,8 @@ Resources:
 ##########################################################################
   StarWebhookHandler:
     Type: AWS::Serverless::Function
-    Description: A github webhook handler when repo is starred
     Properties:
+      Description: A github webhook handler when repo is starred
       CodeUri: src_starred/
       Handler: app.handler
       Runtime: nodejs12.x
@@ -45,8 +45,8 @@ Resources:
   
   PushWebhookHandler:
     Type: AWS::Serverless::Function
-    Description: A github webhook handler when repo is forked
     Properties:
+      Description: A github webhook handler when repo is forked
       CodeUri: src_push/
       Handler: app.handler
       Runtime: nodejs12.x
