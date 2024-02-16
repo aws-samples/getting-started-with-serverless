@@ -1,7 +1,7 @@
 # Part 4 - local developer workflow
 
 ## Generating a test event payload
-When you invoke your Lambda function code locally, The invocation must contain an event object with a JSON representation of the HTTP request. The file `/eventstestEvent.json` has a template API Gateway event. The body of the event is currently empty. 
+When you invoke your Lambda function code locally, The invocation must contain an event object with a JSON representation of the HTTP request. The file `/events/testEvent.json` has a template API Gateway event. The body of the event is currently empty. 
 
 ### Paste the GitHub webhook payload into the event body:
 
