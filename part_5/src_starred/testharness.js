@@ -13,7 +13,7 @@
   SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 // Mock event
-const event = require('../events/pushevent.json')
+const event = require('../events/testEvent.json')
 // Mock environment variables
 const environmentVars = require('../env.json')
 process.env.AWS_REGION = environmentVars.AWS_REGION
